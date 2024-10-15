@@ -11,6 +11,7 @@ export const SecondaryButton = styled(Button)`
     color: #fff;
     padding: 13px 38px;
     transition: all 0.3s ease;
+    display: block;
     &:hover {
     background-color: ${theme.palette.secondary[600]};
   }

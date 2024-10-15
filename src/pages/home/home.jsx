@@ -24,32 +24,32 @@ export const Home = () => {
     return (
         <>
             <Banner />
-            <Box py={"100px"}>
+            <Box py={{xs:"40px", md:"100px"}}>
                 <Container maxWidth="xs">
-                    <Stack direction={"row"} gap={"32px"} alignItems={"end"} mb={"29px"}>
+                    <Stack direction={"row"} gap={{ xs: 0, md: "32px" }} alignItems={"center"} mb={"29px"} justifyContent={{ xs: "space-between", md: "flex-start" }}>
                         <Typography variant="h2">Новинки</Typography>
                         <CustomLink>Все новинки</CustomLink>
                         
                     </Stack>
                     <Grid2 container spacing={"40px"}>
                             {products.map((item) => {
-                                return <Grid2 key={item.id} size={3}>
+                                return <Grid2 size={{ sm: 12, md: 6, lg: 3 }} key={item.id}>
                                     <ProductCard {...item} />
                                 </Grid2>
                         })}
                         </Grid2>
                 </Container>
             </Box>
-            <Box pb={"100px"}>
+            <Box pb={{xs:"40px", md:"100px"}}>
                 <Container maxWidth="xs">
-                    <Stack direction={"row"} gap={"32px"} alignItems={"end"} mb={"29px"}>
+                    <Stack direction={"row"} gap={{ xs: 0, md: "32px" }} alignItems={"center"} mb={"29px"} justifyContent={{ xs: "space-between", md: "flex-start" }}>
                         <Typography variant="h2">Скидки</Typography>
                         <CustomLink>Все новинки</CustomLink>
                         
                     </Stack>
                     <Grid2 container spacing={"40px"}>
                             {products.map((item) => {
-                                return <Grid2 key={item.id} size={3}>
+                                return <Grid2 size={{ sm: 12, md: 6, lg: 3 }} key={item.id}>
                                     <ProductCard {...item} />
                                 </Grid2>
                         })}

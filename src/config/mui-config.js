@@ -97,10 +97,17 @@ export const theme = createTheme({
         },
         h1: {
             fontWeight: 700,
-            fontSize: "60px",
+            fontSize: "30px",
             lineHeight: "130%",
             color: "#f9f9f9",
-            width: "524px"
+            width: "262px",
+            textAlign: "center",
+           
+            "@media (min-width:900px)": {
+                fontSize: "60px",
+                width: "524px",
+                textAlign: "start"
+              },
         },
         h4: {
             fontWeight: 700,
@@ -112,9 +119,9 @@ export const theme = createTheme({
     breakpoints: {
         values: {
             xs: 0,
-            sm: 300,
+            sm: 320,
             md: 900,
-            lg: 1200,
+            lg: 1150,
             xl: 1536,
         }
     }

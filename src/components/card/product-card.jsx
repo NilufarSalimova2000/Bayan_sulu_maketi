@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { Box, IconButton, Rating, Stack, Typography } from '@mui/material';
 import { HeartIcon } from "../../assets/icons/heart-icon";
 import { theme } from '../../config/mui-config';
+import { HeartActiveIcon } from '../../assets/icons/heart-active-icon';
 
 const CardWrapper = styled.div`
     padding: 20px;
@@ -17,14 +18,13 @@ const NewCardBadge = styled.p`
   color: #fff;
   padding: 3px 20px;
   position: absolute;
-  top: 0px;
+  top: 7px;
   left: 0;
 `;
 
 const InstallmentPrice = styled.div`
     font-weight: 400;
     font-size: 14px;
-    /* line-height: 100%; */
     color: #fff;
     background: #618c78;
     width: 69px;
@@ -33,10 +33,11 @@ const InstallmentPrice = styled.div`
 `
 
  export const ProductCard = ({id, img, title, size, location, raiting, price, installment, new:newProduct}) => {
+  const[active, setActive] = React.useState(false);
   return (
     <CardWrapper>
       <Stack mb={"20px"} direction={"row"} justifyContent={"space-between"} alignItems={"center"}><div>{newProduct && <NewCardBadge>Новинка</NewCardBadge>}</div>
-      <IconButton><HeartIcon /></IconButton></Stack>
+      <IconButton onClick={() => setActive(!active)}>{active ? <HeartActiveIcon /> : <HeartIcon />}</IconButton></Stack>
       <Box mb={"20px"} textAlign={"center"}>
         <img src={img} alt="imag" />
       </Box>
@@ -44,7 +45,7 @@ const InstallmentPrice = styled.div`
       <Typography mb={"8px"} variant='body2'>Размер: {size}</Typography>
       <Typography mb={"8px"} variant='body2'>Производитель: {location}</Typography>
       <Stack mb={"16px"} direction={"row"} alignItems={"center"} gap={"8px"}>
-        <Rating value={raiting} precision={0.5} readOnly />
+        <Rating value={raiting} precision={0.5}  />
         <Typography variant='h3'>0 отзывов</Typography>
       </Stack>
       <Stack direction={"row"} gap={"15px"}>
