@@ -11,7 +11,8 @@ export const PrimaryButton = styled(Button)`
     color: #fff;
     padding: 13px 38px;
     transition: all 0.3s ease;
-    display: block;
+    display: flex;
+    align-items: center;
     &:hover {
     background-color: ${theme.palette.primary[600]};
   }

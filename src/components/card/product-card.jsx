@@ -48,8 +48,8 @@ const CustomLink = styled(Link)`
     <CardWrapper>
       <Stack mb={"20px"} direction={"row"} justifyContent={"space-between"} alignItems={"center"}><div>{newProduct && <NewCardBadge>Новинка</NewCardBadge>}</div>
       <IconButton onClick={() => setActive(!active)}>{active ? <HeartActiveIcon /> : <HeartIcon />}</IconButton></Stack>
-      <Box mb={"20px"} textAlign={"center"}>
-        <img src={img} alt="imag" />
+      <Box mb={"20px"} textAlign={"center"} height={"316px"}>
+        <img height={"316px"} width={"236px"} src={img} alt="imag" />
       </Box>
       <CustomLink to={`/product/${id}`}>
         <Typography color='inherit' fontWeight={500} mb={"8px"} variant='body1'>{title}</Typography>

@@ -5,6 +5,7 @@ import { products } from "../../data/product-data";
 import { SecondaryButton } from "../secondary-button/style";
 import { PrimaryButton } from "../primary-button/style";
 import styled from "@emotion/styled";
+import { BtnStartIcon } from "../../assets/icons/btn-start-icon";
 import LabTabs from "../tab/tab";
 
 const ServiceWrapper = styled.div`
@@ -30,13 +31,13 @@ export const ProductDetail = () => {
                     <Stack direction={"row"}  gap={"40px"} mb={"64px"}>
                         <Box>
                             <Box maxWidth={"180px"} mb={"40px"}>
-                                <img style={{ borderRadius: '20px' }} src={carpet.img} alt="imag" />
+                                <img width={"180px"} style={{ borderRadius: '20px' }} src={carpet.img} alt="imag" />
                             </Box>
                             <Box maxWidth={"180px"} mb={"40px"}>
-                                <img style={{ borderRadius: '20px' }} src={carpet.img} alt="imag" />
+                                <img width={"180px"} style={{ borderRadius: '20px' }} src={carpet.img} alt="imag" />
                             </Box>
                             <Box maxWidth={"180px"}>
-                                <img style={{ borderRadius: '20px' }} src={carpet.img} alt="imag" />
+                                <img width={"180px"} style={{ borderRadius: '20px' }} src={carpet.img} alt="imag" />
                             </Box>
                         </Box>
                         <Box>
@@ -62,7 +63,7 @@ export const ProductDetail = () => {
                                 <Typography variant="h3">Подробнее</Typography>
                             </ServiceWrapper>
                             <Typography mb={"16px"} mt={"32px"} variant="h4">Нужна помощь с выбором? Просто напишите нам в WhatsApp и мы обязательно вам поможем!</Typography>
-                            <PrimaryButton>Написать</PrimaryButton>
+                            <PrimaryButton startIcon={<BtnStartIcon />}>Написать</PrimaryButton>
                         </Stack>
                     </Stack>
                     <LabTabs />
