@@ -4,6 +4,7 @@ import { Box, IconButton, Rating, Stack, Typography } from '@mui/material';
 import { HeartIcon } from "../../assets/icons/heart-icon";
 import { theme } from '../../config/mui-config';
 import { HeartActiveIcon } from '../../assets/icons/heart-active-icon';
+import { Link } from 'react-router-dom';
 
 const CardWrapper = styled.div`
     padding: 20px;
@@ -32,6 +33,15 @@ const InstallmentPrice = styled.div`
     padding: 2px 0;
 `
 
+const CustomLink = styled(Link)`
+  text-decoration: none;
+  transition: all 0.4s ease;
+  color: #1d1d1d;
+  &:hover {
+    color: ${theme.palette.primary.main};
+  }
+`
+
  export const ProductCard = ({id, img, title, size, location, raiting, price, installment, new:newProduct}) => {
   const[active, setActive] = React.useState(false);
   return (
@@ -41,7 +51,9 @@ const InstallmentPrice = styled.div`
       <Box mb={"20px"} textAlign={"center"}>
         <img src={img} alt="imag" />
       </Box>
-      <Typography fontWeight={500} mb={"8px"} variant='body1'>{title}</Typography>
+      <CustomLink to={`/product/${id}`}>
+        <Typography color='inherit' fontWeight={500} mb={"8px"} variant='body1'>{title}</Typography>
+      </CustomLink>
       <Typography mb={"8px"} variant='body2'>Размер: {size}</Typography>
       <Typography mb={"8px"} variant='body2'>Производитель: {location}</Typography>
       <Stack mb={"16px"} direction={"row"} alignItems={"center"} gap={"8px"}>

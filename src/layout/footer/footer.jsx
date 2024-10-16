@@ -60,7 +60,7 @@ const EmailInput = () => {
 export const Footer = () => {
     return (
         <Box bgcolor={"#f2f2f2"} py={{ xs: "20px", md: "40px" }}>
-            <Container>
+            <Container maxWidth={"xs"}>
                 <Stack direction={{ md: "row" }} justifyContent={"space-between"}>
                     <Stack>
                         <Stack direction={"row"} justifyContent={"space-between"} alignItems={"start"}>

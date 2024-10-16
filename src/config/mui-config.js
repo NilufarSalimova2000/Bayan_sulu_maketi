@@ -80,7 +80,7 @@ export const theme = createTheme({
             fontWeight: 400,
             fontSize: "18px",
             lineHeight: "100%",
-            color: "#1d1d1d"
+            color: "#1d1d1d",
         },
         body2: {
             fontWeight: 400,
@@ -115,6 +115,18 @@ export const theme = createTheme({
             lineHeight: "130%",
             color: "#1d1d1d",
         },
+        h5: {
+            fontWeight: 400,
+            fontSize: "40px",
+            lineHeight: "145%",
+            color: "#1d1d1d",
+        },
+        h6: {
+            fontWeight: 400,
+            fontSize: "40px",
+            lineHeight: "145%",
+            color: "#618c78",
+        }
     },
     breakpoints: {
         values: {
